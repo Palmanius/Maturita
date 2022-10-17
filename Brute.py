@@ -1,14 +1,13 @@
-from tracemalloc import start
+from nbformat import write
+from numpy import maximum
 
 
-Start = 2*3*5*7*11*13*17*19*23*29*30
-number = Start
-done = False
-while not done:
-    done = True
-    for i in range(2,31):
-        if number % i != 0:
-            done = False
-    if not done:
-        number += Start
-print(number)
+apple = "apple"
+number = 2
+number2 = "2"
+set1 = ("banana",3) #tupple
+set2 = ["banana",3] #array
+set3 = {"banana":3,"apple":2,"avocado":6} #dictionary
+
+
+print(max(set3.values()))
