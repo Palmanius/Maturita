@@ -1,5 +1,5 @@
 class Solution:
-    def fizzBuzz(self, n: int):
+    def fizzBuzz(self, n: int) -> List([]):
         solve = []
         for i in range(1,n+1):
             if i % 3 == 0:
@@ -12,4 +12,3 @@ class Solution:
             else:
                 solve.append(str(i))
         return(solve)
-print(Solution.fizzBuzz("",10))
