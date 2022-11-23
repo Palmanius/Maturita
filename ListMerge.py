@@ -3,25 +3,27 @@ class ListNode:
         self.val = val
         self.next = next
     def __repr__(self) -> str:
-        return f"val {self.val} next {self.next}"
+        return f"val{self.val} next{self.next}"
 
 class Solution:
-    def mergeTwoLists(self, list1: ListNode, list2: ListNode) -> ListNode:
-        def Merger(self,list1:ListNode,list2:ListNode) -> ListNode:
+    def mergeTwoLists(self, list1: ListNode, list2: ListNode) -> ListNode:        
+        def Merger(list1,list2,list3) -> ListNode:
             if list1 == None and list2 == None:
-                return self
+                return ListNode(list3,None)
             elif list1 == None:
-                return Merger(ListNode(self,list2.val),None,list2.next)
+                return Merger(None,list2.next,ListNode(list3,list2.val))
             elif list2 == None:
-                return Merger(ListNode(self,list1.val),list1.next,None)
+                return Merger(list1.next,None,ListNode(list3,list1.val))
+            elif list1.val < list2.val:
+                return Merger(list1.next,list2,ListNode(list3,list1.val))
             else:
-                if list1.val > list2.val:
-                    return Merger(ListNode(self,list2.val),list1,list2.next)
-                else:
-                    return Merger(ListNode(self,list1.val),list1.next,list2)
-        
-        return Merger(ListNode(),list1,list2)
+                return Merger(list1,list2.next,ListNode(list3,list2.val))
 
+        return(Merger(list1,list2,None))
+
+
+        
 list1 = ListNode(1,ListNode(2,ListNode(4,None)))
 list2 = ListNode(1,ListNode(3,ListNode(4,None)))
-print(Solution.mergeTwoLists(ListNode(),list1,list2))
+
+print(Solution.mergeTwoLists("",list1,list2))
