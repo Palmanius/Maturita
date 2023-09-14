@@ -1,12 +1,14 @@
-HCF = 0
 
-a = 120
-b = 25
 
-while a!=b:
-    if a>b:
-        a-=b
+
+a= "a"
+b = 2
+
+
+for i in range(1,100):
+    if i % 2 == 0:
+        break
     else:
-        b-=a
+        print(i)
+    print("Test")
 
-print(a)
