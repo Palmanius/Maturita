@@ -1,4 +1,4 @@
-firstDay = int(input("Which day does June start with?"))
+firstDay = int(input("Which day does June start with?\n"))
 days =["Mon","Tue","Wed","Thu","Fri","Sat","Sun"]
 June = [days]
 firstweek = []
@@ -13,7 +13,7 @@ June.append(firstweek)
 while day < 31:
     nextWeek =[]
     for i in range(7):
-        if day> 9:
+        if day > 9 and day < 31:
             nextWeek.append(""+str(day)+" ")
             day += 1
         elif day < 31:
