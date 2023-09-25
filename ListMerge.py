@@ -25,5 +25,7 @@ class Solution:
         
 list1 = ListNode(1,ListNode(2,ListNode(4,None)))
 list2 = ListNode(1,ListNode(3,ListNode(4,None)))
+print(list1)
 
-print(Solution.mergeTwoLists("",list1,list2))
+
+#print(Solution.mergeTwoLists("",list1,list2))
