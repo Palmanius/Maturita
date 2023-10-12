@@ -1,4 +1,4 @@
-Binary = "10110110"
+Binary = "111101011"
 Hexa = ""
 ConversionTable = {
     "0000":"0",
@@ -19,6 +19,7 @@ ConversionTable = {
     "1111":"F"
 }
 
+print(str(hex(int(Binary,base=2))))
 if len(Binary)%4 != 0: Binary = "0"*(4-len(Binary)%4) + Binary
 for i in range(0,len(Binary),4):
     print(Binary[i:i+4])
