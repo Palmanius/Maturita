@@ -18,10 +18,10 @@ ConversionTable = {
     "1110":"E",
     "1111":"F"
 }
-
-print(str(hex(int(Binary,base=2))))
 if len(Binary)%4 != 0: Binary = "0"*(4-len(Binary)%4) + Binary
 for i in range(0,len(Binary),4):
     print(Binary[i:i+4])
     Hexa += ConversionTable[Binary[i:i+4]]
 print(Hexa)
+
+print(str(hex(int(Binary,base=2))))
