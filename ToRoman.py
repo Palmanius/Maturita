@@ -18,9 +18,10 @@ def toRoman(num):
     roman = ""
     
     for i in conversion_table:
-        if num//i[0] != 0:
-            roman += i[1] * (num//i[0])
-            num = num % i[0]
+        if num>0:
+            if num//i[0] != 0:
+                roman += i[1] * (num//i[0])
+                num = num % i[0]
 
     return roman
 
