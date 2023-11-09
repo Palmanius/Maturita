@@ -1,24 +1,17 @@
 class Solution:
-    LoN = []
-    def permute(self=list[int], nums=list[int]):
-        if len(nums) < 2:
-            return Solution.LoN.append(self)
-        else:
-            for i in nums:
-                self.append(i)
-                NewNums = [x for x in nums if x!=i]
-                Solution.permute(self,NewNums)
- 
-        return Solution.LoN
-
-
-
-
+    def permute(self, nums=list[int]):
+        Solutions = []
+        if len(nums) == 1:
+            return str(nums[0])
         
+        for i in nums:
+            for j in Solution.permute("", [x for x in nums if x != i]):
+                Solutions.append(str(i)+j)
+        
+            #Solutions.append([i] +x for x in Solution.permute("",[x for x in nums if x !=i]))
+        return Solutions
+                
+nums = [1,2,3,4]
 
-
-
-nums = [1,2,3]
-
-print(Solution.permute([],nums))
+print(Solution.permute("",nums))
         
