@@ -29,12 +29,7 @@ def AddBinary(Bin1,Bin2):
 
 print(AddBinary("1011","1001"))
 
-
-
 Bin1 = "1011"
 Bin2 = "1001"
 
 print(bin((int(Bin1,2)+int(Bin2,2)))[2:])
-
-
-
