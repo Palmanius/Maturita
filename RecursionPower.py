@@ -5,8 +5,6 @@ def Power(n,p):
         return(n)
     return n * Power(n,p-1)
 
-
-
 number = 3
 power = 4
 print(Power(number,power))
