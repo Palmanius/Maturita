@@ -16,3 +16,4 @@ def HammNum(i,j,k):
 HammNum(0,0,0)
 
 print(sorted(Hamming))
+#1, 2, 3, 4, 5, 6, 8, 9, 10, 12, 15, 16, 18, 20, 24, 25, 27
