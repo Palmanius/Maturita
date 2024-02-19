@@ -1,0 +1,1 @@
+print(" ".join("Never gonna give you up"[::-1].split(" ")[::-1]))
